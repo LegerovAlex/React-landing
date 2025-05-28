@@ -1,0 +1,19 @@
+@use "@/styles/vars" as *;
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: $text-base;
+}
+
+.views {
+  font-size: 20px;
+  font-weight: 400;
+  color: $text-secondary;
+}

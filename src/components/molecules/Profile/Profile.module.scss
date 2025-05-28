@@ -1,0 +1,23 @@
+@use "@/styles/vars" as *;
+
+.avatar {
+  border-radius: 50%;
+  object-fit: cover;
+  transition: opacity 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    opacity: 0.7;
+    box-shadow: 0 8px 16px $shadow-hover;
+    cursor: pointer;
+  }
+
+  &__big {
+    width: 80px;
+    height: 80px;
+  }
+
+  &__small {
+    width: 40px;
+    height: 40px;
+  }
+}

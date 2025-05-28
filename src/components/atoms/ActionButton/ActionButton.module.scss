@@ -1,0 +1,26 @@
+@use "@/styles/vars" as *;
+
+.button {
+  position: relative;
+  color: rgba(0, 0, 0, 0.24);
+
+  &:hover {
+    color: $accent-danger;
+  }
+
+  svg {
+    transition: color 0.3s ease;
+  }
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: $accent-danger;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+}

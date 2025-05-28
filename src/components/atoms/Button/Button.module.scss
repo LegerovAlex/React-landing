@@ -1,0 +1,17 @@
+@use "@/styles/vars" as *;
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: $accent-danger;
+  color: $text-duration;
+  border-radius: 20px;
+
+  transition: opacity 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    opacity: 0.7;
+    box-shadow: 0 8px 16px $shadow-hover;
+  }
+}

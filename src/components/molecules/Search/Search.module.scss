@@ -1,0 +1,21 @@
+@use "@/styles/vars" as *;
+
+.wrapper {
+  max-width: 830px;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  padding: 12px 18px 12px 23px;
+  background-color: $bg-placeholder;
+  border-radius: 22px;
+}
+
+.input {
+  width: 100%;
+
+  &::placeholder {
+    font-size: 16px;
+    color: $text-placeholder;
+    opacity: 0.4;
+  }
+}

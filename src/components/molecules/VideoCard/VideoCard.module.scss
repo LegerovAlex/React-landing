@@ -1,0 +1,64 @@
+@use "@/styles/vars" as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.preview {
+  position: relative;
+  width: 100%;
+}
+
+.img {
+  max-width: 367px;
+  aspect-ratio: 367 / 213;
+  border-radius: 14px;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    opacity: 0.7;
+    box-shadow: 0 8px 16px $shadow-hover;
+  }
+}
+
+.duration {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 3px 9px;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: $text-duration;
+  text-align: center;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  color: $text-primary;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $text-hover;
+  }
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 18px;
+  color: $text-secondary;
+}
+
+.author {
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $text-hover;
+  }
+}

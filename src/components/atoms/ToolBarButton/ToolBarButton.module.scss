@@ -1,0 +1,28 @@
+@use "@/styles/vars" as *;
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: $bg-placeholder;
+  border-radius: 20px;
+
+  transition: opacity 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    opacity: 0.7;
+    box-shadow: 0 8px 16px $shadow-hover;
+  }
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 400;
+  color: $text-primary;
+}
+
+.last-button {
+  background-color: $bg-main;
+  margin-left: 30px;
+}

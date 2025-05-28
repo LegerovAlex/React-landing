@@ -1,0 +1,61 @@
+@use "@/styles/vars" as *;
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 48px;
+  border-top: 1px solid $border-default;
+}
+
+.info {
+  display: flex;
+  gap: 12px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  color: $text-primary;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $text-hover;
+  }
+}
+
+.date {
+  font-size: 13px;
+  font-weight: 400;
+  color: $text-secondary;
+}
+
+.description {
+  max-width: 820px;
+  font-size: 16px;
+  font-weight: 400;
+  color: $text-base;
+}
+
+.toggle {
+  font-weight: 400;
+  font-size: 20px;
+  color: $text-secondary;
+
+  &:hover {
+    cursor: pointer;
+    color: $text-hover;
+  }
+}

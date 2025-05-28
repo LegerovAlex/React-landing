@@ -1,0 +1,22 @@
+.header {
+  padding: 22px 70px 30px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.brandSection {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.userSection {
+  display: flex;
+  gap: 45px;
+}
+
+.searchSection {
+  width: 100%;
+}

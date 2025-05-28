@@ -1,0 +1,19 @@
+@use "@/styles/vars" as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: $text-primary;
+}
