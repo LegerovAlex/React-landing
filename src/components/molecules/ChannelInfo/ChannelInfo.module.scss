@@ -1,4 +1,5 @@
 @use "@/styles/vars" as *;
+@use "@/styles/mixin" as *;
 
 .wrapper {
   display: flex;
@@ -6,11 +7,27 @@
   align-items: flex-start;
   padding-top: 48px;
   border-top: 1px solid $border-default;
+
+  @include mediaMobile {
+    padding: 20px 20px 20px 16px;
+    align-items: center;
+    border-bottom: 1px solid $border-default;
+  }
 }
 
 .info {
   display: flex;
   gap: 12px;
+
+  @include mediaTablet {
+    flex-direction: column;
+  }
+
+  @include mediaMobile {
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  }
 }
 
 .content {
@@ -34,10 +51,20 @@
   &:hover {
     color: $text-hover;
   }
+
+  @include mediaMobile {
+    font-size: 16px;
+  }
 }
 
 .date {
   font-size: 13px;
+  font-weight: 400;
+  color: $text-secondary;
+}
+
+.subscribers {
+  font-size: 12px;
   font-weight: 400;
   color: $text-secondary;
 }
@@ -47,6 +74,10 @@
   font-size: 16px;
   font-weight: 400;
   color: $text-base;
+
+  @include mediaMobile {
+    display: none;
+  }
 }
 
 .toggle {
@@ -57,5 +88,9 @@
   &:hover {
     cursor: pointer;
     color: $text-hover;
+  }
+
+  @include mediaMobile {
+    display: none;
   }
 }

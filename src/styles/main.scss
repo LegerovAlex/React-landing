@@ -1,11 +1,11 @@
 @use "@/styles/vars" as *;
+@use "@/styles/mixin" as *;
 @use "@/styles/reset";
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap");
 
 body {
   font-family: $font-main;
   background-color: $bg-main;
-  margin: 0 auto;
 }
 
 #root {

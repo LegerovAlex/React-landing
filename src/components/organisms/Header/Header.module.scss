@@ -1,9 +1,15 @@
+@use "@/styles/mixin" as *;
+
 .header {
   padding: 22px 70px 30px 30px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   gap: 60px;
+
+  @include mediaMobile {
+    padding: 12px 20px 20px 16px;
+    gap: 45px;
+  }
 }
 
 .brandSection {
@@ -19,4 +25,8 @@
 
 .searchSection {
   width: 100%;
+
+  @include mediaMobile {
+    text-align: end;
+  }
 }

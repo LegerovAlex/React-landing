@@ -1,15 +1,18 @@
 import type { FC } from "react";
-
 import { ActionButtonList } from "@/components/molecules/ActionButtonsList/ActionButtonsList";
 import { BurgerMenu } from "@/components/molecules/BurgerMenu/BurgerMenu";
 import { Logo } from "@/components/molecules/Logo/Logo";
 import { Profile } from "@/components/molecules/Profile/Profile";
 import { Search } from "@/components/molecules/Search/Search";
-import { ProfileImg } from "@/static";
+import { MoreVerticalIcon, ProfileImg, SearchIcon } from "@/static";
 
 import styles from "./Header.module.scss";
+import { useMediaQuery } from "react-responsive";
+import { breakpoints } from "@/const/breakpoints";
 
 export const Header: FC = () => {
+  const isMobile = useMediaQuery({ maxWidth: breakpoints.mobile });
+
   return (
     <div className={styles.header}>
       <div className={styles.brandSection}>
@@ -17,11 +20,17 @@ export const Header: FC = () => {
         <Logo />
       </div>
       <div className={styles.searchSection}>
-        <Search placeholder="Search" />
+        {isMobile ? <SearchIcon /> : <Search placeholder="Search" />}
       </div>
       <div className={styles.userSection}>
-        <ActionButtonList />
-        <Profile size="small" src={ProfileImg} />
+        {isMobile ? (
+          <MoreVerticalIcon />
+        ) : (
+          <>
+            <ActionButtonList />
+            <Profile size="small" src={ProfileImg} />
+          </>
+        )}
       </div>
     </div>
   );

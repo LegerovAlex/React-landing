@@ -1,19 +1,32 @@
 @use "@/styles/vars" as *;
+@use "@/styles/mixin" as *;
 
 .wrapper {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  @include mediaMobile {
+    padding: 0px 16px 0 16px;
+    gap: 13px;
+  }
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: baseline;
 }
 
 .title {
   font-size: 36px;
   font-weight: 700;
   color: $text-primary;
+
+  @include mediaTablet {
+    font-size: 25px;
+  }
+
+  @include mediaMobile {
+    font-size: 20px;
+  }
 }

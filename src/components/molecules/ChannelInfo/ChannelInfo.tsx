@@ -4,6 +4,8 @@ import { Profile } from "../Profile/Profile";
 import styles from "./ChannelInfo.module.scss";
 import type { ChannelInfoProps } from "./СhannelInfo.model";
 import { Link } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
+import { breakpoints } from "@/const/breakpoints";
 
 export const ChannelInfo: FC<ChannelInfoProps> = ({
   date,
@@ -11,18 +13,25 @@ export const ChannelInfo: FC<ChannelInfoProps> = ({
   subscribeText,
   imageSrc,
   toggle,
+  subscribers,
   title,
 }) => {
+  const isMobile = useMediaQuery({ maxWidth: breakpoints.mobile });
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.info}>
-        <Profile src={imageSrc} size="big" />
+        <Profile src={imageSrc} size={isMobile ? "medium" : "big"} />
         <div className={styles.content}>
           <div className={styles.header}>
             <Link to="/profile">
               <h2 className={styles.title}>{title}</h2>
             </Link>
-            <p className={styles.date}>{date}</p>
+            {isMobile ? (
+              <p className={styles.subscribers}>{subscribers}</p>
+            ) : (
+              <p className={styles.date}>{date}</p>
+            )}
           </div>
           <p className={styles.description}>{description}</p>
           <span className={styles.toggle}>{toggle}</span>

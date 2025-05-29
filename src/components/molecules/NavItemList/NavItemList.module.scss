@@ -1,0 +1,15 @@
+@use "@/styles/vars" as *;
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 22px 11px 24px;
+  border-top: 1px solid $border-default;
+  background-color: $bg-main;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}

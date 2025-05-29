@@ -6,12 +6,8 @@ import { ActionButton } from "../../atoms/ActionButton/ActionButton";
 export const ActionButtonList: FC = () => {
   return (
     <div className={styles.wrapper}>
-      {actionButtonsConfig.map(({ icon, notificationCount, key, onClick }) => (
-        <ActionButton
-          onClick={onClick}
-          key={key}
-          notificationCount={notificationCount}
-        >
+      {actionButtonsConfig.map(({ icon, notificationCount, id }) => (
+        <ActionButton key={id} notificationCount={notificationCount}>
           {icon}
         </ActionButton>
       ))}

@@ -1,5 +1,18 @@
+@use "@/styles/mixin" as *;
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 .main {
   display: flex;
   gap: 44px;
   padding: 0 70px 48px 75px;
+
+  @include mediaMobile {
+    flex-direction: column;
+    padding: 0;
+    gap: 20px;
+  }
 }

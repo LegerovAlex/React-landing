@@ -1,0 +1,13 @@
+@use "@/styles/vars" as *;
+
+@mixin mediaMobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin mediaTablet {
+  @media (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}

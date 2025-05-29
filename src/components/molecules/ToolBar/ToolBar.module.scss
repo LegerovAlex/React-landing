@@ -1,4 +1,11 @@
+@use "@/styles/mixin" as *;
+
 .toolBar {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
+
+  @include mediaMobile {
+    flex-wrap: nowrap;
+  }
 }

@@ -1,19 +1,23 @@
 @use "@/styles/vars" as *;
+@use "@/styles/mixin" as *;
 
 .card {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  @include mediaMobile {
+    gap: 8px;
+  }
 }
 
 .preview {
   position: relative;
-  width: 100%;
+  max-width: 367px;
 }
 
 .img {
-  max-width: 367px;
-  aspect-ratio: 367 / 213;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   border-radius: 14px;
   object-fit: cover;
   display: block;
@@ -29,6 +33,7 @@
   position: absolute;
   bottom: 10px;
   right: 10px;
+  font-size: 14px;
   padding: 3px 9px;
   border-radius: 12px;
   background-color: rgba(0, 0, 0, 0.3);
@@ -45,6 +50,14 @@
   &:hover {
     color: $text-hover;
   }
+
+  @include mediaTablet {
+    font-size: 18px;
+  }
+
+  @include mediaMobile {
+    font-size: 16px;
+  }
 }
 
 .meta {
@@ -53,6 +66,14 @@
   font-weight: 400;
   font-size: 18px;
   color: $text-secondary;
+
+  @include mediaTablet {
+    font-size: 15px;
+  }
+
+  @include mediaMobile {
+    font-size: 13px;
+  }
 }
 
 .author {

@@ -1,10 +1,15 @@
 @use "@/styles/vars" as *;
+@use "@/styles/mixin" as *;
 
 .burger {
   display: flex;
   flex-direction: column;
   gap: 4px;
   align-items: center;
+
+  @include mediaMobile {
+    display: none;
+  }
 }
 
 .line {

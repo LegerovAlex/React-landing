@@ -2,19 +2,16 @@ import { CameraIcon, ExtensionIcon, NotificationIcon } from "@/static";
 
 export const actionButtonsConfig = [
   {
-    key: "camera",
+    id: 1,
     icon: <CameraIcon />,
-    onClick: () => console.log("Camera clicked"),
   },
   {
-    key: "extension",
+    id: 2,
     icon: <ExtensionIcon />,
-    onClick: () => console.log("Extension clicked"),
   },
   {
-    key: "notifications",
+    id: 3,
     icon: <NotificationIcon />,
     notificationCount: 3,
-    onClick: () => console.log("Notifications clicked"),
   },
 ];

@@ -1,9 +1,15 @@
+@use "@/styles/mixin" as *;
+
 .wrapper {
   iframe {
     width: 100%;
-    aspect-ratio: 1363 / 700;
+    aspect-ratio: 1363 / 660;
     border-radius: 12px;
     height: 100%;
     border: none;
+
+    @include mediaMobile {
+      border-radius: 0;
+    }
   }
 }

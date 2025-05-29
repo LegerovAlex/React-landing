@@ -7,6 +7,12 @@ import LikeIcon from "./icons/like.svg?react";
 import DislikeIcon from "./icons/dislike.svg?react";
 import ShareIcon from "./icons/share.svg?react";
 import MoreIcon from "./icons/more.svg?react";
+import MoreVerticalIcon from "./icons/moreVertical.svg?react";
+import ArrowIcon from "./icons/arrow.svg?react";
+import HomeIcon from "./icons/home.svg?react";
+import FireIcon from "./icons/fire.svg?react";
+import FoldersIcon from "./icons/folders.svg?react";
+import FolderIcon from "./icons/folder.svg?react";
 
 import ProfileImg from "./img/user.png";
 import ChannelImg from "./img/channel.png";
@@ -25,6 +31,12 @@ export {
   DislikeIcon,
   ShareIcon,
   MoreIcon,
+  ArrowIcon,
+  MoreVerticalIcon,
+  HomeIcon,
+  FireIcon,
+  FoldersIcon,
+  FolderIcon,
   ProfileImg,
   ChannelImg,
   FirstVideoImg,

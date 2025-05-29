@@ -1,6 +1,21 @@
+@use "@/styles/mixin" as *;
+
 .wrapper {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   padding: 20px 0 29px 0;
+
+  @include mediaTablet {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  @include mediaMobile {
+    padding: 13px 20px 30px 16px;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
 }
