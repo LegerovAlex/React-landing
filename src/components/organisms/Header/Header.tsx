@@ -9,6 +9,7 @@ import { MoreVerticalIcon, ProfileImg, SearchIcon } from "@/static";
 import styles from "./Header.module.scss";
 import { useMediaQuery } from "react-responsive";
 import { breakpoints } from "@/const/breakpoints";
+import { ProfileSize } from "@/components/molecules/Profile/Profile.model";
 
 export const Header: FC = () => {
   const isMobile = useMediaQuery({ maxWidth: breakpoints.mobile });
@@ -28,7 +29,7 @@ export const Header: FC = () => {
         ) : (
           <>
             <ActionButtonList />
-            <Profile size="small" src={ProfileImg} />
+            <Profile size={ProfileSize.Small} src={ProfileImg} />
           </>
         )}
       </div>

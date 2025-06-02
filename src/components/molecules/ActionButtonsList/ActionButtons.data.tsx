@@ -1,6 +1,6 @@
 import { CameraIcon, ExtensionIcon, NotificationIcon } from "@/static";
 
-export const actionButtonsConfig = [
+export const actionButtonsData = [
   {
     id: 1,
     icon: <CameraIcon />,

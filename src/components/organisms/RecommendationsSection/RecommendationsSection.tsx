@@ -7,13 +7,17 @@ import { en } from "@/localization/en";
 export const RecommendationsSection: FC = () => {
   const [autoplay, setAutoplay] = useState(true);
 
+  const handleToggleChange = () => {
+    setAutoplay(!autoplay);
+  };
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.header}>
         <h2 className={styles.title}>{en.RecommendationsSection.title}</h2>
         <Toggle
           checked={autoplay}
-          onChange={() => setAutoplay(!autoplay)}
+          onChange={handleToggleChange}
           label={en.RecommendationsSection.label}
         />
       </div>

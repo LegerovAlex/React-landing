@@ -6,6 +6,7 @@ import type { ChannelInfoProps } from "./СhannelInfo.model";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import { breakpoints } from "@/const/breakpoints";
+import { ProfileSize } from "../Profile/Profile.model";
 
 export const ChannelInfo: FC<ChannelInfoProps> = ({
   date,
@@ -21,7 +22,10 @@ export const ChannelInfo: FC<ChannelInfoProps> = ({
   return (
     <div className={styles.wrapper}>
       <div className={styles.info}>
-        <Profile src={imageSrc} size={isMobile ? "medium" : "big"} />
+        <Profile
+          src={imageSrc}
+          size={isMobile ? ProfileSize.Medium : ProfileSize.Big}
+        />
         <div className={styles.content}>
           <div className={styles.header}>
             <Link to="/profile">

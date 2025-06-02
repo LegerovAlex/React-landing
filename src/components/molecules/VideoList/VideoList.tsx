@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import { VideoCard } from "../VideoCard/VideoCard";
-import { videoCardData } from "./VideoList.config";
+import { videoCardData } from "./VideoList.data";
 import styles from "./VideoList.module.scss";
 
 export const VideoList: FC = () => {

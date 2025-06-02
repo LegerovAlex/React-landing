@@ -1,6 +1,6 @@
 import { FireIcon, FolderIcon, FoldersIcon, HomeIcon } from "@/static";
 
-export const navItemListConfig = [
+export const navItemListData = [
   {
     id: 1,
     icon: <HomeIcon />,
